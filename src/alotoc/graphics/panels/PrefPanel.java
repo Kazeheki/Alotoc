@@ -23,7 +23,7 @@ public class PrefPanel extends Panel {
 	public PrefPanel(final AbstractAlotocFrame f) {
 		super(f.getWidth() - Constants.SMALL_SIDE_PNL_SIZE, Constants.SMALL_SIDE_PNL_SIZE,
 				Constants.SMALL_SIDE_PNL_SIZE, Constants.SMALL_SIDE_PNL_SIZE, "O", 15);
-		this.setBackground(new Color(128, 128, 128, 128));
+		this.setBackground(new Color(128, 128, 128, 200));
 		f.add(this);
 	}
 }
