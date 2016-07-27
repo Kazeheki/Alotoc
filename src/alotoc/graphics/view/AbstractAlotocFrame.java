@@ -33,6 +33,7 @@ public abstract class AbstractAlotocFrame extends JFrame {
 		this.setBounds(x, y, w, h);
 		this.setUndecorated(true);
 		this.setLayout(null);
+		this.setResizable(false);
 	}
 
 	/**
