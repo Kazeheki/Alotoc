@@ -81,7 +81,7 @@ public class ClockView extends JPanel {
 		int lastX = d.width;
 
 		d = lblDot.getPreferredSize();
-		lblDot.setBounds(lastX * 4, 0, d.width, d.height - 25);
+		lblDot.setBounds(lastX - 2, 0, d.width, d.height - 25);
 		lastX = d.width;
 
 		d = lblMin.getPreferredSize();
@@ -101,13 +101,14 @@ public class ClockView extends JPanel {
 	public static void setColor(final int r, final int g, final int b) {
 		setColor(new Color(r, g, b));
 	}
-	
+
 	/**
 	 * Set the color of the labels to given Color.
 	 * 
-	 * @param c The new Color for the labels.
+	 * @param c
+	 *            The new Color for the labels.
 	 */
-	public static void setColor(final Color c){
+	public static void setColor(final Color c) {
 		lblDot.setForeground(c);
 		lblHour.setForeground(c);
 		lblMin.setForeground(c);
