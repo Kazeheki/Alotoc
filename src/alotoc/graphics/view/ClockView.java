@@ -81,7 +81,7 @@ public class ClockView extends JPanel {
 		int lastX = d.width;
 
 		d = lblDot.getPreferredSize();
-		lblDot.setBounds(lastX - 2, 0, d.width, d.height - 25);
+		lblDot.setBounds(lastX - 3, 0, d.width, d.height - 25);
 		lastX = d.width;
 
 		d = lblMin.getPreferredSize();

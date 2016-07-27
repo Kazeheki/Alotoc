@@ -14,6 +14,9 @@ import javax.swing.JPanel;
  */
 @SuppressWarnings("serial")
 public abstract class Panel extends JPanel {
+	
+	/** Label for the text of the panel. */
+	protected JLabel lbl = new JLabel();
 
 	/**
 	 * Ctor.
@@ -40,7 +43,6 @@ public abstract class Panel extends JPanel {
 		this.setOpaque(true);
 		this.setLayout(null);
 		if (hasText) {
-			JLabel lbl = new JLabel();
 			lbl.setText(text);
 			lbl.setFont(new Font(Font.MONOSPACED, Font.BOLD, fontSize));
 			lbl.setBounds(width / 4 + 1, -1, width, height);

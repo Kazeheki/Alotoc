@@ -6,9 +6,11 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import alotoc.Constants;
 import alotoc.graphics.panels.ColorPanel;
+import alotoc.graphics.panels.GoPanel;
 
 /**
  * This is a panel for the display of the preferences.
@@ -25,7 +27,12 @@ public class PrefView extends JPanel {
 	private final JLabel h2 = new JLabel();
 	/** ColorPanels for choosing color of clock. */
 	private final ColorPanel[] colorPnls = new ColorPanel[Constants.COLORS.length];
-
+	/** TextField for the input of a hex-value for the color. */
+	private final JTextField inputField = new JTextField();
+	/** The frame this panel belongs to. */
+	private final AbstractAlotocFrame frame;
+	
+	
 	/**
 	 * Ctor.
 	 * 
@@ -33,6 +40,7 @@ public class PrefView extends JPanel {
 	 *            Frame the panel belongs to.
 	 */
 	public PrefView(final AbstractAlotocFrame f) {
+		this.frame = f;
 		this.setBounds(0, 0, f.getWidth(), f.getHeight());
 		this.setOpaque(false);
 		this.setLayout(null);
@@ -43,6 +51,10 @@ public class PrefView extends JPanel {
 		
 		this.add(h1);
 		this.add(h2);
+		int goX = (int) (inputField.getPreferredSize().getWidth() + (Constants.PREF_FRM_WIDTH/2 - inputField.getPreferredSize().width/2-6));
+		this.add(new GoPanel(frame, goX - 10 + Constants.GO_BTN_SIZE/2, 162));
+		inputField.setHorizontalAlignment(JTextField.CENTER);
+		this.add(inputField);
 
 		final int y = Constants.COLOR_Y;
 		int x = (f.getWidth() - (Constants.COLOR_PNL_SIZE * colorPnls.length)) / 2;
@@ -61,6 +73,10 @@ public class PrefView extends JPanel {
 	private void setTexts() {
 		h1.setText("Choose a color for the clock");
 		h2.setText("Or type in a hex-value");
+		String str = Integer.toHexString(Constants.COLORS[1].getRed());
+		str += Integer.toHexString(Constants.COLORS[1].getGreen());
+		str += Integer.toHexString(Constants.COLORS[1].getBlue());
+		inputField.setText(str);
 	}
 
 	/**
@@ -71,6 +87,7 @@ public class PrefView extends JPanel {
 		Color c = new Color(230, 230, 230, 230);
 		h1.setFont(font);
 		h2.setFont(font);
+		inputField.setFont(font);
 		h1.setForeground(c);
 		h2.setForeground(c);
 	}
@@ -83,5 +100,7 @@ public class PrefView extends JPanel {
 		h1.setBounds(20, 10, d.width, d.height);
 		d = h2.getMinimumSize();
 		h2.setBounds(20, 120, d.width, d.height);
+		d = inputField.getPreferredSize();
+		inputField.setBounds(Constants.PREF_FRM_WIDTH/2 - d.width/2-20, 160, d.width+12, d.height);
 	}
 }

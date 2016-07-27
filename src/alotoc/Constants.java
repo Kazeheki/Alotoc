@@ -15,7 +15,7 @@ public final class Constants {
 	public static final int PREF_FRM_HEIGHT = 220;
 	public static final int PREF_FRM_WIDTH = 550;
 	public static final int SMALL_SIDE_PNL_SIZE = 15;
-	public static final int GO_BTN_SIZE = 50;
+	public static final int GO_BTN_SIZE = 35;
 	public static final int COLOR_PNL_SIZE = 50;
 	
 	// coordinates.
