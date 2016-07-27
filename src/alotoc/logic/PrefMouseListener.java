@@ -94,7 +94,7 @@ public class PrefMouseListener implements MouseListener {
 	/**
 	 * Check whether a color was clicked.
 	 * 
-	 * @param e The MouseEvent that happend.
+	 * @param e The MouseEvent that happened.
 	 * @return Whether a color was clicked.
 	 */
 	private boolean checkColor(final MouseEvent e){
@@ -115,6 +115,12 @@ public class PrefMouseListener implements MouseListener {
 		return clicked;
 	}
 	
+	/**
+	 * Check whether the go button was clicked.
+	 * 
+	 * @param e The MouseEvent that just happened.
+	 * @return Whether the go button was clicked.
+	 */
 	private boolean checkGo(final MouseEvent e){
 		boolean clicked = false;
 		
@@ -132,6 +138,12 @@ public class PrefMouseListener implements MouseListener {
 		return clicked;
 	}
 	
+	/**
+	 * Make a color out of a hex string.
+	 * 
+	 * @param hex The String that describes the color value.
+	 * @return Color created out of hex value.
+	 */
 	private Color hexToColor(final String hex){
 		Color c = null;
 		try{
