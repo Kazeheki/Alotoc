@@ -1,5 +1,6 @@
 package alotoc.graphics.view;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -33,18 +34,22 @@ public class PrefView extends JPanel {
 	 */
 	public PrefView(final AbstractAlotocFrame f) {
 		this.setBounds(0, 0, f.getWidth(), f.getHeight());
-		this.setOpaque(true);
+		this.setOpaque(false);
 		this.setLayout(null);
 
 		setTexts();
 		setFonts();
 		setBounds();
+		
+		this.add(h1);
+		this.add(h2);
 
-		final int y = 50;
-		int x = 50;
+		final int y = Constants.COLOR_Y;
+		int x = (f.getWidth() - (Constants.COLOR_PNL_SIZE * colorPnls.length)) / 2;
 		for (int i = 0; i < colorPnls.length; i++) {
 			colorPnls[i] = new ColorPanel(x, y, Constants.COLORS[i]);
 			x += Constants.COLOR_PNL_SIZE;
+			this.add(colorPnls[i]);
 		}
 
 		this.setVisible(true);
@@ -62,9 +67,12 @@ public class PrefView extends JPanel {
 	 * Set fonts of labels.
 	 */
 	private void setFonts() {
-		Font font = new Font(Font.MONOSPACED, Font.BOLD, 50);
+		Font font = new Font(Font.MONOSPACED, Font.BOLD, 25);
+		Color c = new Color(230, 230, 230, 230);
 		h1.setFont(font);
 		h2.setFont(font);
+		h1.setForeground(c);
+		h2.setForeground(c);
 	}
 
 	/**
@@ -72,8 +80,8 @@ public class PrefView extends JPanel {
 	 */
 	private void setBounds() {
 		Dimension d = h1.getMinimumSize();
-		h1.setBounds(50, 20, d.width, d.height);
+		h1.setBounds(20, 10, d.width, d.height);
 		d = h2.getMinimumSize();
-		h2.setBounds(50, 100, d.width, d.height);
+		h2.setBounds(20, 120, d.width, d.height);
 	}
 }

@@ -98,8 +98,16 @@ public class ClockView extends JPanel {
 	 * @param b
 	 *            blue
 	 */
-	void setColor(final int r, final int g, final int b) {
-		Color c = new Color(r, g, b);
+	public static void setColor(final int r, final int g, final int b) {
+		setColor(new Color(r, g, b));
+	}
+	
+	/**
+	 * Set the color of the labels to given Color.
+	 * 
+	 * @param c The new Color for the labels.
+	 */
+	public static void setColor(final Color c){
 		lblDot.setForeground(c);
 		lblHour.setForeground(c);
 		lblMin.setForeground(c);

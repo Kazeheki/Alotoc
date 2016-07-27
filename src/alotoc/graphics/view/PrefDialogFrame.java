@@ -24,7 +24,7 @@ public class PrefDialogFrame extends AbstractAlotocFrame {
 	 */
 	public PrefDialogFrame(final int x, final int y) {
 		super(x, y, Constants.PREF_FRM_WIDTH, Constants.PREF_FRM_HEIGHT, "Preferences");
-		this.setBackground(new Color(128, 128, 128, 230));
+		this.setBackground(new Color(50, 50, 50, 128));
 		this.addMouseListener(new PrefMouseListener(this));
 		this.add(new PrefView(this));
 

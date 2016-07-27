@@ -7,6 +7,7 @@ import java.awt.event.MouseListener;
 
 import alotoc.Constants;
 import alotoc.graphics.view.AbstractAlotocFrame;
+import alotoc.graphics.view.ClockView;
 
 /**
  * This is a MouseListener specifically for the preferences dialog.
@@ -35,6 +36,7 @@ public class PrefMouseListener implements MouseListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		boolean quit = checkQuit(e);
+		quit |= checkColor(e);
 
 		if (!quit) {
 			isPressed = true;
@@ -82,6 +84,24 @@ public class PrefMouseListener implements MouseListener {
 			frame.dispose();
 		}
 
+		return clicked;
+	}
+	
+	private boolean checkColor(final MouseEvent e){
+		boolean clicked = false;
+		
+		final Point clickedAt = e.getPoint();
+		final int x = (frame.getWidth() - (Constants.COLOR_PNL_SIZE * Constants.COLORS.length)) / 2;
+		final int y = Constants.COLOR_Y;
+		final int ex = x + Constants.COLORS.length * Constants.COLOR_PNL_SIZE;
+		final int ey = y + Constants.COLOR_PNL_SIZE;
+		
+		if(isInside(clickedAt, x, y, ex, ey)){
+			clicked = true;
+			int idx = (clickedAt.x - x) / Constants.COLOR_PNL_SIZE;
+			ClockView.setColor(Constants.COLORS[idx]);
+		}
+		
 		return clicked;
 	}
 
