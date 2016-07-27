@@ -12,16 +12,17 @@ import alotoc.graphics.view.AbstractAlotocFrame;
  * @see Panel
  */
 @SuppressWarnings("serial")
-class PrefPanel extends Panel {
+public class PrefPanel extends Panel {
 
 	/**
 	 * Ctor.
 	 * 
-	 * @param f Frame the panel shall be added to.
+	 * @param f
+	 *            Frame the panel shall be added to.
 	 */
-	PrefPanel(final AbstractAlotocFrame f) {
+	public PrefPanel(final AbstractAlotocFrame f) {
 		super(f.getWidth() - Constants.SMALL_SIDE_PNL_SIZE, Constants.SMALL_SIDE_PNL_SIZE,
-				Constants.SMALL_SIDE_PNL_SIZE, Constants.SMALL_SIDE_PNL_SIZE, "O");
+				Constants.SMALL_SIDE_PNL_SIZE, Constants.SMALL_SIDE_PNL_SIZE, "O", 15);
 		this.setBackground(new Color(128, 128, 128, 128));
 		f.add(this);
 	}
