@@ -109,6 +109,9 @@ public class ClockView extends JPanel {
 	 *            The new Color for the labels.
 	 */
 	public static void setColor(final Color c) {
+		if(c == null){
+			return;
+		}
 		lblDot.setForeground(c);
 		lblHour.setForeground(c);
 		lblMin.setForeground(c);

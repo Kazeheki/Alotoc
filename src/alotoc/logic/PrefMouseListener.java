@@ -1,13 +1,16 @@
 package alotoc.logic;
 
+import java.awt.Color;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.JTextField;
+
 import alotoc.Constants;
-import alotoc.graphics.view.AbstractAlotocFrame;
 import alotoc.graphics.view.ClockView;
+import alotoc.graphics.view.PrefDialogFrame;
 
 /**
  * This is a MouseListener specifically for the preferences dialog.
@@ -18,7 +21,7 @@ import alotoc.graphics.view.ClockView;
 public class PrefMouseListener implements MouseListener {
 
 	/** The panel the listener belongs to. */
-	private final AbstractAlotocFrame frame;
+	private final PrefDialogFrame frame;
 
 	/** Whether the button is currently pressed. */
 	private boolean isPressed = false;
@@ -29,7 +32,7 @@ public class PrefMouseListener implements MouseListener {
 	 * @param f
 	 *            The frame the listener belongs to.
 	 */
-	public PrefMouseListener(final AbstractAlotocFrame f) {
+	public PrefMouseListener(final PrefDialogFrame f) {
 		frame = f;
 	}
 
@@ -37,6 +40,7 @@ public class PrefMouseListener implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 		boolean quit = checkQuit(e);
 		quit |= checkColor(e);
+		quit |= checkGo(e);
 
 		if (!quit) {
 			isPressed = true;
@@ -87,6 +91,12 @@ public class PrefMouseListener implements MouseListener {
 		return clicked;
 	}
 	
+	/**
+	 * Check whether a color was clicked.
+	 * 
+	 * @param e The MouseEvent that happend.
+	 * @return Whether a color was clicked.
+	 */
 	private boolean checkColor(final MouseEvent e){
 		boolean clicked = false;
 		
@@ -103,6 +113,42 @@ public class PrefMouseListener implements MouseListener {
 		}
 		
 		return clicked;
+	}
+	
+	private boolean checkGo(final MouseEvent e){
+		boolean clicked = false;
+		
+		final Point clickedAt = e.getPoint();
+		final int x = Constants.GO_X;
+		final int y = Constants.GO_Y;
+		final int ex = x + Constants.GO_BTN_SIZE;
+		final int ey = y + Constants.GO_BTN_SIZE;
+		
+		if(isInside(clickedAt, x, y, ex, ey)){
+			JTextField txt = frame.getInputField();
+			ClockView.setColor(hexToColor(txt.getText()));
+		}
+		
+		return clicked;
+	}
+	
+	private Color hexToColor(final String hex){
+		Color c = null;
+		try{
+			int r = Integer.parseInt(hex.substring(0, 2), 16);
+			int g = Integer.parseInt(hex.substring(2, 5), 16);
+			int b = Integer.parseInt(hex.substring(4, 6), 16);
+			int a = 255;
+			if(hex.length() == 8){
+				a = Integer.parseInt(hex.substring(6, 8), 16);
+			}
+			c = new Color(r,g,b,a);
+			
+		}catch(NumberFormatException n){
+			frame.getInputField().setText("ERROR");
+		}
+		
+		return c;		
 	}
 
 	/**

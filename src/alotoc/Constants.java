@@ -20,6 +20,8 @@ public final class Constants {
 	
 	// coordinates.
 	public static final int COLOR_Y = 50;
+	public static final int GO_X = 323;
+	public static final int GO_Y = 162;
 
 	// strings.
 	public static final String DOT_ON = ":";

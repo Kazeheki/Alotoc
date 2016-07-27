@@ -2,6 +2,8 @@ package alotoc.graphics.view;
 
 import java.awt.Color;
 
+import javax.swing.JTextField;
+
 import alotoc.Constants;
 import alotoc.logic.PrefMouseListener;
 
@@ -13,6 +15,9 @@ import alotoc.logic.PrefMouseListener;
  */
 @SuppressWarnings("serial")
 public class PrefDialogFrame extends AbstractAlotocFrame {
+	
+	/** The input field of this frame. */
+	private JTextField inputField;
 
 	/**
 	 * Ctor.
@@ -26,8 +31,14 @@ public class PrefDialogFrame extends AbstractAlotocFrame {
 		super(x, y, Constants.PREF_FRM_WIDTH, Constants.PREF_FRM_HEIGHT, "Preferences");
 		this.setBackground(new Color(50, 50, 50, 200));
 		this.addMouseListener(new PrefMouseListener(this));
-		this.add(new PrefView(this));
+		PrefView view = new PrefView(this);
+		this.add(view);
+		this.inputField = view.getInputField();
 
 		this.setVisible(true);
+	}
+	
+	public final JTextField getInputField(){
+		return inputField;
 	}
 }

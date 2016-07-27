@@ -51,8 +51,7 @@ public class PrefView extends JPanel {
 		
 		this.add(h1);
 		this.add(h2);
-		int goX = (int) (inputField.getPreferredSize().getWidth() + (Constants.PREF_FRM_WIDTH/2 - inputField.getPreferredSize().width/2-6));
-		this.add(new GoPanel(frame, goX - 10 + Constants.GO_BTN_SIZE/2, 162));
+		this.add(new GoPanel(frame, Constants.GO_X, Constants.GO_Y));
 		inputField.setHorizontalAlignment(JTextField.CENTER);
 		this.add(inputField);
 
@@ -102,5 +101,10 @@ public class PrefView extends JPanel {
 		h2.setBounds(20, 120, d.width, d.height);
 		d = inputField.getPreferredSize();
 		inputField.setBounds(Constants.PREF_FRM_WIDTH/2 - d.width/2-20, 160, d.width+12, d.height);
+	}
+	
+	
+	protected JTextField getInputField(){
+		return inputField;
 	}
 }
