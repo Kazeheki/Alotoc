@@ -18,3 +18,5 @@ The clock is also draggable to wherever you want it to be.
 
 
 To run it simply execute the Alotoc.jar file. 
+
+Currently it can only display GERMAN time. This will be changed later.
