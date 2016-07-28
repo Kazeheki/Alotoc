@@ -85,6 +85,7 @@ public class PrefMouseListener implements MouseListener {
 		final Point clickedAt = e.getPoint();
 		if (isInside(clickedAt, x, y, ex, ey)) {
 			clicked = true;
+			PrefDialogFrame.close();
 			frame.dispose();
 		}
 
