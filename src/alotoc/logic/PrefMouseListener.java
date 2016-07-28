@@ -110,7 +110,15 @@ public class PrefMouseListener implements MouseListener {
 		if(isInside(clickedAt, x, y, ex, ey)){
 			clicked = true;
 			int idx = (clickedAt.x - x) / Constants.COLOR_PNL_SIZE;
-			ClockView.setColor(Constants.COLORS[idx]);
+			Color c = Constants.COLORS[idx];
+			ClockView.setColor(c);
+			String r = Integer.toHexString(c.getRed());
+			String g = Integer.toHexString(c.getGreen());
+			String b = Integer.toHexString(c.getBlue());
+			r = r.length() < 2 ? "0"+r : r;
+			g = g.length() < 2 ? "0"+g : g;
+			b = b.length() < 2 ? "0"+b : b;
+			frame.getInputField().setText(r+g+b);
 		}
 		
 		return clicked;
