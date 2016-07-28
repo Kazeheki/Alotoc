@@ -17,6 +17,8 @@ public final class Constants {
 	public static final int SMALL_SIDE_PNL_SIZE = 15;
 	public static final int GO_BTN_SIZE = 35;
 	public static final int COLOR_PNL_SIZE = 50;
+	public static final int CHNG_LOC_WIDTH = 145;
+	public static final int CHNG_LOC_HEIGHT = 20;
 	
 	// coordinates.
 	public static final int COLOR_Y = 50;

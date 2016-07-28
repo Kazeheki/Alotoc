@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import alotoc.Constants;
+import alotoc.graphics.panels.ChangeLocationPanel;
 import alotoc.graphics.panels.ColorPanel;
 import alotoc.graphics.panels.GoPanel;
 import alotoc.graphics.panels.QuitPanel;
@@ -55,7 +56,8 @@ public class PrefView extends JPanel {
 		this.add(new GoPanel(frame, Constants.GO_X, Constants.GO_Y));
 		inputField.setHorizontalAlignment(JTextField.CENTER);
 		this.add(inputField);
-		this.add(new QuitPanel(frame));
+		new QuitPanel(frame);
+		new ChangeLocationPanel(frame);
 
 		final int y = Constants.COLOR_Y;
 		int x = (f.getWidth() - (Constants.COLOR_PNL_SIZE * colorPnls.length)) / 2;
