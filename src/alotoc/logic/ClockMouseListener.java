@@ -109,7 +109,7 @@ public class ClockMouseListener implements MouseListener {
 		final Point clickedAt = e.getPoint();
 		if (isInside(clickedAt, x, y, ex, ey)) {
 			clicked = true;
-			new PrefDialogFrame(frame.getX(), frame.getY() + frame.getHeight() + 10);
+			PrefDialogFrame.getInstance(frame.getX(), frame.getY() + frame.getHeight() + 10);
 		}
 
 		return clicked;
