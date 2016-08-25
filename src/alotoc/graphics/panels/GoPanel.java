@@ -26,7 +26,7 @@ public class GoPanel extends Panel {
 	 */
 	public GoPanel(final AbstractAlotocFrame f, final int x, final int y) {
 		super(x, y, Constants.GO_BTN_SIZE, Constants.GO_BTN_SIZE, "GO", 25);
-		this.setBackground(new Color(50, 50, 50, 200));
+		this.setBackground(new Color(70, 70, 70, 200));
 		lbl.setLocation(3, 0);
 		lbl.setForeground(new Color(230,230,230));
 		f.add(this);

@@ -142,6 +142,7 @@ public class PrefMouseListener implements MouseListener {
 		if(isInside(clickedAt, x, y, ex, ey)){
 			JTextField txt = frame.getInputField();
 			ClockView.setColor(hexToColor(txt.getText()));
+			clicked = true;
 		}
 		
 		return clicked;
