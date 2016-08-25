@@ -19,11 +19,25 @@ public class MainFrame extends AbstractAlotocFrame {
 
 	/** The clockView of this frame. */
 	private final ClockView cv;
+	
+	/** This Frame. */
+	private static MainFrame instance = null;
+	
+	/**
+	 * Get an instance of the MainFrame.
+	 * @return Instance of MainFrame.
+	 */
+	public static MainFrame getInstance(){
+		if(instance == null){
+			instance = new MainFrame();
+		}
+		return instance;
+	}
 
 	/**
 	 * Ctor.
 	 */
-	public MainFrame() {
+	private MainFrame() {
 		super(MouseInfo.getPointerInfo().getLocation(), Constants.MAIN_FRM_WIDTH, Constants.MAIN_FRM_HEIGHT, "Clock");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setBackground(new Color(0, 0, 0, 0));
@@ -36,5 +50,14 @@ public class MainFrame extends AbstractAlotocFrame {
 		t.start();
 
 		this.setVisible(true);
+	}
+	
+	/**
+	 * Get the ClockView of this Frame.
+	 * 
+	 * @return The ClockView of this Frame.
+	 */
+	public final ClockView getClockView(){
+		return cv;
 	}
 }

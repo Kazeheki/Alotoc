@@ -11,7 +11,7 @@ import alotoc.graphics.view.MainFrame;
 public class AlotocMain {
 
 	public static void main(String[] args) {
-		new MainFrame();
+		MainFrame.getInstance();
 	}
 
 }

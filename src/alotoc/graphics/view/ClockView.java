@@ -116,6 +116,15 @@ public class ClockView extends JPanel {
 		lblHour.setForeground(c);
 		lblMin.setForeground(c);
 	}
+	
+	/**
+	 * Get the current color of the clock.
+	 * 
+	 * @return Current color of clock.
+	 */
+	protected Color getColor(){
+		return lblDot.getForeground();
+	}
 
 	/**
 	 * Updates the text of the labels/the clock.

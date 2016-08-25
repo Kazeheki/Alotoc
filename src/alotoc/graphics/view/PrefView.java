@@ -74,9 +74,10 @@ public class PrefView extends JPanel {
 	private void setTexts() {
 		h1.setText("Choose a color for the clock");
 		h2.setText("Or type in a hex-value");
-		String str = Integer.toHexString(Constants.COLORS[1].getRed());
-		str += Integer.toHexString(Constants.COLORS[1].getGreen());
-		str += Integer.toHexString(Constants.COLORS[1].getBlue());
+		Color currCol = MainFrame.getInstance().getClockView().getColor();
+		String str = Integer.toHexString(currCol.getRed());
+		str += Integer.toHexString(currCol.getGreen());
+		str += Integer.toHexString(currCol.getBlue());
 		inputField.setText(str);
 	}
 
