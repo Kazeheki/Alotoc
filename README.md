@@ -10,6 +10,9 @@
                                         Always on top clock
                                         
                                         
+
+Visit the website: http://kazeheki.github.io/Alotoc/
+
 This project is a clock for everyone who wants a fixated clock on their screen.
 
 The clock is always visible on top of everything. The color can be changed in the preferences by choosing a set color or by typing in a hex-value for the color. 
