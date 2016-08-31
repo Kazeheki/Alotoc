@@ -1,0 +1,76 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+<head>
+  <title>ALOTOC</title>
+  <style type="text/css">
+    @import "css/import.css";
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <script style="text/css">
+    $(window).on("load", function(){
+      $(".loader").remove();
+    })
+  </script>
+</head>
+
+<!-- HEAD END -->
+
+<body>
+  <noscript>
+  <div>JavaScript is disabled on your browser.</div>
+  </noscript>
+  <div class="loader">
+    <div class="loaderBall"></div>
+  </div> <!--Loader-->
+  <div class="wrapper">
+    <header>
+      <div class="banner">
+        <span id="alotoc">
+          ALOTOC
+        </span>
+      </div> <!--Banner-->
+      <div class="menu">
+        <div class="menuBtn hoverable">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <table class="menuTable">
+          <tr>
+            <td class ="hoverable" onclick="goToHome()">Home</td>
+            <td class ="hoverable"  onclick="goToGit()">Github</td>
+            <td class ="hoverable"  onclick="goToScreenshots()">Screenshots</td>
+            <td class ="hoverable"  onclick="goToDocu()">Code Documentation</td>
+          </tr>
+        </table>
+      </div> <!--Menu-->
+      <div class="menuList">
+        <ul>
+          <li class ="hoverable" onclick="goToHome()">Home</li>
+          <li class ="hoverable" onclick="goToGit()">Github</li>
+          <li class ="hoverable" onclick="goToScreenshots()">Screenshots</li>
+          <li class ="hoverable" onclick="goToDocu()">Code Documentation</li>
+        </ul>
+      </div> <!--MenuList-->
+    </header>
+
+    <div class="content">
+      <div class="contentInner"></div>
+      <div class="footer">
+        <div>
+          Contact me: <a href="mailto:kazeheki@web.de">kazeheki@web.de</a>
+        </div>
+      </div> <!--Footer-->
+    </div> <!--Content-->
+
+  </div> <!--Wrapper-->
+
+  <!-- AngularJs files -->
+  <script src="js/alotoc.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

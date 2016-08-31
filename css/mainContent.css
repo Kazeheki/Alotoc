@@ -1,0 +1,19 @@
+#mainContent{
+  padding: 15px;
+  //padding-top: 4rem;
+  padding-bottom: 6rem;
+  margin: auto;
+  color: white;
+  min-width: 500px;
+  max-width: 900px;
+  width: 50%;
+}
+
+#mainContent li{
+  list-style-type: square;
+}
+
+#mainContent a{
+  color: lime;
+  text-decoration: underline;
+}

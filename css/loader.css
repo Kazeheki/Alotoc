@@ -1,0 +1,61 @@
+.loader{
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  position: absolute;
+}
+
+.loaderBall{
+  position: absolute;
+  display: inline-block;
+  border: 2px solid;
+  border-color: black;
+  border-radius: 50%;
+
+  background-color: white;
+
+  animation-name: ball_animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ball_animation{
+  0%, 20%, 40%, 60%, 80%, 100%{
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: white;
+  }
+
+  10%, 30%, 50%, 70%, 90%{
+    top: -30px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  11%{
+    background-color: yellow;
+  }
+
+  31%{
+    background-color: lime;
+  }
+
+  51%{
+    background-color: green;
+  }
+
+  71%{
+    background-color: lightblue;
+  }
+
+  91%{
+    background-color: blue;
+  }
+}

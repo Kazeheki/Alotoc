@@ -1,0 +1,46 @@
+body{
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  margin: 0;
+  background-color: #2E3B40;
+  font-size: 20px;
+  font-family:  fantasy, "Arial";
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+.unselectable{
+  -webkit-user-selec: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.hoverOver{
+  background-color: #0E3745;
+  color: white;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background: #d4d4d4;
+}
+
+.footer a{
+  color: currentColor;
+}
+
+.footer div{
+  padding-top: 15px;
+}
