@@ -11,7 +11,7 @@
                                         
                                         
 
-Visit the website: https://kazeheki.github.io/Alotoc/index.html
+Visit the [website](https://kazeheki.github.io/Alotoc/index.html)
 
 This project is a clock for everyone who wants a fixated clock on their screen.
 
