@@ -1,21 +1,8 @@
 @import "colors";
+@import "functions";
 
 $btnSize: 20px;
 $btnBorder: 2px solid $borderCol;
-
-@mixin transform($trans){
-  -webkit-transform: $trans;
-  -moz-transform: $trans;
-  -o-transform: $trans;
-  transform: $trans;
-}
-
-@mixin transition($time, $type){
-  -webkit-transition: $time $type;
-  -moz-transition: $time $type;
-  -o-transition: $time $type;
-  transition: $time $type;
-}
 
 .menuBtn{
   position: absolute;
