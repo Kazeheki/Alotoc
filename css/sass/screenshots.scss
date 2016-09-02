@@ -1,3 +1,16 @@
+@import "colors";
+
+$cardBorder: 2px solid black;
+$imgBorder: 1px solid black;
+
+@mixin transform($trans){
+  -webkit-transform: $trans;
+  -moz-transform: $trans;
+  -ms-transform: $trans;
+  -o-transform: $trans;
+  transform: $trans;
+}
+
 #screenshots{
   padding: 15px;
   padding-bottom: 6rem;
@@ -6,31 +19,31 @@
   max-width: 1000px;
   width: 100%;
   height: 100%;
-}
 
-#screenshots .pic{
-  margin: auto;
-  margin-bottom: 10px;
-  width: 400px;
+  .pic{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 400px;
 
-  background-color: gray;
-  border: 2px solid;
-}
+    background-color: $picCol;
+    border: $cardBorder;
 
-#screenshots .pic:hover{
-  transform: scale(1.05);
-}
+    &:hover{
+      @include transform(scale(1.05));
+    }
 
-#screenshots .pic img{
-  border: 1px solid black;
-  margin-left: 25px;
-  margin-top: 25px;
-  width: 350px;
-  height: auto;
-}
+    img{
+      border: imgBorder;
+      margin-left: 25px;
+      margin-top: 25px;
+      width: 350px;
+      height: auto;
+    }
 
-#screenshots .pic .desc{
-  margin: auto;
-  padding: 5px;
-  text-align: center;
+    .desc{
+      margin: auto;
+      padding: 5px;
+      text-align: center;
+    }
+  }
 }

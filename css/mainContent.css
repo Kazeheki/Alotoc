@@ -7,11 +7,9 @@
   max-width: 900px;
   width: 50%;
 }
-
 #mainContent li {
   list-style-type: square;
 }
-
 #mainContent a {
   color: lime;
   text-decoration: underline;

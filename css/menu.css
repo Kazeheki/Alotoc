@@ -6,12 +6,10 @@
 }
 
 .menuTable {
-  font-family: fantasy;
   font-size: 2rem;
   color: white;
   height: 100%;
 }
-
 .menuTable tr td {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -26,24 +24,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .menuTable tr td:nth-child(1) {
   border-left-style: none;
 }
 
 .menuList {
-  font-family: fantasy;
   font-size: 2rem;
   width: 15rem;
   position: absolute;
   z-index: 1000;
 }
-
 .menuList ul {
   margin: 0;
   padding-left: 0;
 }
-
 .menuList ul li {
   margin-top: -2px;
   list-style-type: none;
@@ -54,13 +48,11 @@
   background-color: #376D7F;
   color: white;
 }
-
 .menuList ul li:hover {
   background-color: #0E3745;
   color: white;
   cursor: pointer;
 }
-
 .menuList ul li:nth-child(1) {
   margin-top: 0;
 }

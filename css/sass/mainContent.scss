@@ -1,3 +1,5 @@
+@import "colors";
+
 #mainContent{
   padding: 15px;
   //padding-top: 4rem;
@@ -7,13 +9,13 @@
   min-width: 500px;
   max-width: 900px;
   width: 50%;
-}
 
-#mainContent li{
-  list-style-type: square;
-}
+  li{
+    list-style-type: square;
+  }
 
-#mainContent a{
-  color: lime;
-  text-decoration: underline;
+  a{
+    color: $linkCol;
+    text-decoration: underline;
+  }
 }

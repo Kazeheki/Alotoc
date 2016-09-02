@@ -36,11 +36,9 @@ body {
   height: 50px;
   background: #d4d4d4;
 }
-
 .footer a {
   color: currentColor;
 }
-
 .footer div {
   padding-top: 15px;
 }
