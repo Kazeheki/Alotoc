@@ -3,7 +3,7 @@ body {
   height: 100%;
   min-width: 500px;
   margin: 0;
-  background-color: #2E3B40;
+  background-color: #f1f2ee;
   font-size: 20px;
   font-family: fantasy, "Arial";
 }
@@ -24,8 +24,8 @@ body {
 }
 
 .hoverOver {
-  background-color: #0E3745;
-  color: white;
+  background-color: #dcf763;
+  color: #435058;
   cursor: pointer;
 }
 

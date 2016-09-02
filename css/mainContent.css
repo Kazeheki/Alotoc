@@ -2,7 +2,7 @@
   padding: 15px;
   padding-bottom: 6rem;
   margin: auto;
-  color: white;
+  color: #435058;
   min-width: 500px;
   max-width: 900px;
   width: 50%;
@@ -11,6 +11,6 @@
   list-style-type: square;
 }
 #mainContent a {
-  color: lime;
+  color: #848c8e;
   text-decoration: underline;
 }

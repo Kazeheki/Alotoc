@@ -55,8 +55,8 @@
 
       padding-left: 0.5rem;
 
-      background-color: #376D7F;
-      color: white;
+      background-color: $menuCol;
+      color: $menuTblTxtCol;
 
       &:hover{
         background-color: $hoverCol;

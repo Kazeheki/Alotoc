@@ -1,12 +1,12 @@
 .banner {
   width: 100%;
-  background-color: #9ECAD9;
+  background-color: #435058;
 }
 .banner span {
   display: block;
   font-size: 20vw;
   text-align: center;
-  background-color: #9ECAD9;
-  color: white;
-  text-shadow: 0 0 2rem #376D7F, 1px 1px 3px #376D7F, 1px -1px 3px #376D7F, -1px 1px 3px #376D7F, -1px -1px 3px #376D7F;
+  background-color: #435058;
+  color: #dcf763;
+  text-shadow: 0 0 2rem #848c8e, 1px 1px 3px #848c8e, 1px -1px 3px #848c8e, -1px 1px 3px #848c8e, -1px -1px 3px #848c8e;
 }

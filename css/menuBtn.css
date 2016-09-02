@@ -3,7 +3,7 @@
   width: 20px;
   height: 20px;
   padding: 10px;
-  border: 2px solid #0E3745;
+  border: 2px solid #435058;
   border-radius: 50%;
   margin-top: 0.2rem;
   margin-left: 1rem;
@@ -49,4 +49,12 @@
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+
+.menuBtn:hover {
+  background-color: #dcf763;
+  color: #435058;
+}
+.menuBtn:hover .bar {
+  background-color: #435058;
 }
