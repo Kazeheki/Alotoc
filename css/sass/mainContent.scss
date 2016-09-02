@@ -1,5 +1,6 @@
-#mainContent {
+#mainContent{
   padding: 15px;
+  //padding-top: 4rem;
   padding-bottom: 6rem;
   margin: auto;
   color: white;
@@ -8,11 +9,11 @@
   width: 50%;
 }
 
-#mainContent li {
+#mainContent li{
   list-style-type: square;
 }
 
-#mainContent a {
+#mainContent a{
   color: lime;
   text-decoration: underline;
 }

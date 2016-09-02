@@ -1,4 +1,4 @@
-#screenshots {
+#screenshots{
   padding: 15px;
   padding-bottom: 6rem;
   margin: auto;
@@ -8,19 +8,20 @@
   height: 100%;
 }
 
-#screenshots .pic {
+#screenshots .pic{
   margin: auto;
   margin-bottom: 10px;
   width: 400px;
+
   background-color: gray;
   border: 2px solid;
 }
 
-#screenshots .pic:hover {
+#screenshots .pic:hover{
   transform: scale(1.05);
 }
 
-#screenshots .pic img {
+#screenshots .pic img{
   border: 1px solid black;
   margin-left: 25px;
   margin-top: 25px;
@@ -28,7 +29,7 @@
   height: auto;
 }
 
-#screenshots .pic .desc {
+#screenshots .pic .desc{
   margin: auto;
   padding: 5px;
   text-align: center;

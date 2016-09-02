@@ -1,7 +1,7 @@
-@import "loader.css";
-@import "menu.css";
-@import "menuBtn.css";
-@import "style.css";
-@import "banner.css";
-@import "mainContent.css";
-@import "screenshots.css";
+@import url(loader.css);
+@import url(menu.css);
+@import url(menuBtn.css);
+@import url(style.css);
+@import url(banner.css);
+@import url(mainContent.css);
+@import url(screenshots.css);
