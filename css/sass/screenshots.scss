@@ -1,6 +1,6 @@
 @import "colors";
 
-$cardBorder: 2px solid black;
+$picCardBorder: 2px solid black;
 $imgBorder: 1px solid black;
 
 @mixin transform($trans){
@@ -25,8 +25,8 @@ $imgBorder: 1px solid black;
     margin-bottom: 10px;
     width: 400px;
 
-    background-color: $picCol;
-    border: $cardBorder;
+    background-color: $picCardCol;
+    border: $picCardBorder;
 
     &:hover{
       @include transform(scale(1.05));
