@@ -11,7 +11,7 @@
 .menuTable{
   //font-family: fantasy;
   font-size: 2rem;
-  color: $menuTblTxtCol;
+  color: $menuTxtCol;
   height: 100%;
 
   tr td{
@@ -20,7 +20,7 @@
     padding-top: 0.3rem;
     table-layout: fixed;
     border-left-style: solid;
-    border-left-color: $menuTblTxtCol;
+    border-left-color: $menuTxtCol;
     border-right-width: medium;
     height: 100%;
     margin: 0;
@@ -56,7 +56,7 @@
       padding-left: 0.5rem;
 
       background-color: $menuCol;
-      color: $menuTblTxtCol;
+      color: $menuTxtCol;
 
       &:hover{
         background-color: $hoverCol;
