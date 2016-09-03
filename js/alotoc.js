@@ -1,8 +1,12 @@
+function isMobile(){
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
+};
 
 function setContentSize(){
+  $(".contentInner").css("font-size", "20px");
   var size = $(".contentInner").css("font-size");
-  if(size < "20px"){
-    $(".contentInner").css("font-size", "20px");
+  if(isMobile() && $(window).width() < 500){
+    $(".contentInner").css("font-size", "35px");
   }
 };
 
