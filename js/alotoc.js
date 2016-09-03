@@ -4,9 +4,11 @@ function isMobile(){
 
 function setContentSize(){
   $(".contentInner").css("font-size", "20px");
+  $(".mainContent").css("width", "55%");
   var size = $(".contentInner").css("font-size");
   if(isMobile()){
     $(".contentInner").css("font-size", "30px");
+    $(".mainContent").css("width", "70%");
   }
 };
 
