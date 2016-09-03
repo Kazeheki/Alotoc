@@ -1,15 +1,8 @@
 @import "colors";
+@import "functions";
 
 $picCardBorder: 2px solid black;
 $imgBorder: 1px solid black;
-
-@mixin transform($trans){
-  -webkit-transform: $trans;
-  -moz-transform: $trans;
-  -ms-transform: $trans;
-  -o-transform: $trans;
-  transform: $trans;
-}
 
 #screenshots{
   padding: 15px;
