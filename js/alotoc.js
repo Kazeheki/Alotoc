@@ -5,7 +5,7 @@ function isMobile(){
 function setContentSize(){
   $(".contentInner").css("font-size", "20px");
   var size = $(".contentInner").css("font-size");
-  if(isMobile() && $(window).width() < 500){
+  if(isMobile() && $(window).width() < 600){
     $(".contentInner").css("font-size", "35px");
   }
 };
