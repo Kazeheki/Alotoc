@@ -1,4 +1,16 @@
 
+function setContentSize(){
+  var size = $(".contentInner").css("font-size");
+  if(size < "20px"){
+    $(".contentInner").css("font-size", "20px");
+  }
+};
+
+function resizeMethods(){
+  setMenu();
+  setContentSize();
+};
+
 var main = function(){
   $(".content").hide();
   $(".contentInner").load("mainContent.html", function(){
@@ -18,9 +30,9 @@ var main = function(){
   $(".menu").addClass("unselectable");
   $(".menuList").addClass("unselectable");
 
-  setMenu();
-  $(window).on("resize", setMenu);
-  $(document).on("resize", setMenu);
+  resizeMethods();
+  $(window).on("resize", resizeMethods);
+  $(document).on("resize", resizeMethods);
 };
 
 $(document).ready(main);
