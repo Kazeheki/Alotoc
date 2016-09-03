@@ -4,13 +4,8 @@ var main = function(){
   $(".contentInner").load("mainContent.html", function(){
     $(".content").fadeIn("slow");
   });
-  //set btn to fixed size.
-  var btnW = $(".menuBtn").width();
-  var btnH = $(".menuBtn").height();
-  $(".menuBtn").css("min-width", btnW);
-  $(".menuBtn").css("max-width", btnW);
-  $(".menuBtn").css("min-height", btnH);
-  $(".menuBtn").css("max-height", btnH);
+
+  setMenuBtnToFixedSize();
 
   $("#alotoc").addClass("unselectable");
   $(".menuBtn").hide();
