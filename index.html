@@ -8,12 +8,6 @@
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-  <script style="text/css">
-    $(window).on("load", function(){
-      $(".loader").remove();
-    })
-  </script>
 </head>
 
 <!-- HEAD END -->
@@ -23,7 +17,9 @@
   <div>JavaScript is disabled on your browser.</div>
   </noscript>
   <div class="loader">
-    <div class="loaderBall"></div>
+    <div class="ballContainer">
+      <div class="loaderBall"></div>
+    </div> <!--BallContainer-->
   </div> <!--Loader-->
   <div class="wrapper">
     <header>

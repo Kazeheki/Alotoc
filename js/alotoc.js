@@ -18,6 +18,12 @@ function resizeMethods(){
 };
 
 var main = function(){
+  /*setTimeout(function(){
+    $(".loader").fadeOut(200, function(){
+      $(".loader").remove();
+    });
+  }, 2000);*/
+  $(".loader").remove();
   $(".content").hide();
   $(".contentInner").load("mainContent.html", function(){
     $(".content").fadeIn("slow");
