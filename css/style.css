@@ -42,3 +42,25 @@ body {
 .footer div {
   padding-top: 15px;
 }
+
+.toTop {
+  margin: 0;
+  position: fixed;
+  bottom: 20vh;
+  right: 0;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.3;
+}
+.toTop circle {
+  fill: #435058;
+}
+.toTop line {
+  stroke: #dcf763;
+  stroke-width: 3;
+}
+.toTop:hover {
+  opacity: 1;
+}

@@ -1,3 +1,22 @@
+function setToTopBtn(){
+  var htmlBody = $("html, body");
+  var btn = $(".toTop");
+  var visible = btn.is(":visible");
+  if(htmlBody.scrollTop() >= 10){
+    if(visible == false){
+      btn.fadeIn(200);
+    }
+  }else{
+    if(visible){
+      btn.fadeOut(200);
+    }
+  }
+};
+
+function goToTop(){
+  $("html, body").animate({scrollTop: 0}, 600);
+};
+
 function isMobile(){
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
 };
@@ -45,6 +64,9 @@ var main = function(){
   resizeMethods();
   $(window).on("resize", resizeMethods);
   $(document).on("resize", resizeMethods);
+
+  $(".toTop").hide();
+  $(document).on("scroll", setToTopBtn);
 };
 
 $(document).ready(main);
