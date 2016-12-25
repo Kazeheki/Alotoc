@@ -1,6 +1,5 @@
 package alotoc.graphics.view;
 
-import java.awt.MouseInfo;
 import java.awt.Point;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -79,7 +78,7 @@ public abstract class AbstractAlotocFrame extends JFrame {
 	 * Store the current position of the frame into the storage file.
 	 */
 	public void storePosition(){
-		Point p = MouseInfo.getPointerInfo().getLocation();
+		Point p = this.getLocation();
 		int x = p.x;
 		int y = p.y;
 		int[] arr = {x,y};
