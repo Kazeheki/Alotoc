@@ -27,6 +27,17 @@ function goToScreenshots(){
   $(".menuList").slideUp(600);
 };
 
+function goToHelp(){
+  $(".content").fadeOut("slow", function(){
+    $(".contentInner").load("help.html", function(){
+      $(".content").fadeIn("slow");
+    });
+  });
+
+  $(".menuBtn").removeClass("open");
+  $(".menuList").slideUp(600);
+};
+
 function goToDocu(){
   location.href = linkDocu;
 };
