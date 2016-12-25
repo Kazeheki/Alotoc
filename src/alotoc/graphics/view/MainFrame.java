@@ -71,8 +71,8 @@ public class MainFrame extends AbstractAlotocFrame {
 	/**
 	 * Get the position saved in the storage file.
 	 * Returns array of size 2. 
-	 * array[0] -> x-Coordinate,
-	 * array[1] -> y-Coordinate;
+	 * array[0] - x-Coordinate,
+	 * array[1] - y-Coordinate;
 	 * @return Coordinates of last position.
 	 */
 	private final int[] loadPosition(){
