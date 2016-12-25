@@ -82,6 +82,7 @@ public class ClockMouseListener implements MouseListener {
 		final Point clickedAt = e.getPoint();
 		if (isInside(clickedAt, x, y, ex, ey)) {
 			clicked = true;
+			frame.storePosition();
 			frame.dispose();
 			AlotocRunnables.halt();
 			System.exit(0);
