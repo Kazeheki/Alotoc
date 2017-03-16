@@ -1,84 +1,104 @@
 <!doctype html>
 <meta charset="utf-8">
+<meta name="author" content="Kazeheki">
+<meta name="date" content="2017-03-16">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="100 days">
+<meta name="revisit" content="after 100 days">
+<meta http-equiv="expires" content="43200">
+<meta name="description" content="Always on top clock: ALOTOC! The clock you've always wanted">
+<meta name="title" content="ALOTOC">
+<meta name="keywords" content="alotoc, always, on top, clock, java">
+<meta http-equiv="language" content="en">
 <html>
+
 <head>
-  <title>ALOTOC</title>
-  <style type="text/css">
-    @import "css/import.css";
-  </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>ALOTOC</title>
+    <style type="text/css">
+        @import "css/import.css";
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <!-- HEAD END -->
 
 <body>
-  <noscript>
+    <noscript>
   <div>JavaScript is disabled on your browser.</div>
   </noscript>
-  <div class="loader">
-    <div class="ballContainer">
-      <div class="loaderBall"></div>
-    </div> <!--BallContainer-->
-  </div> <!--Loader-->
-  <div class="wrapper">
-    <header>
-      <div class="banner">
-        <span id="alotoc">
+    <div class="loader">
+        <div class="ballContainer">
+            <div class="loaderBall"></div>
+        </div>
+        <!--BallContainer-->
+    </div>
+    <!--Loader-->
+    <div class="wrapper">
+        <header>
+            <div class="banner">
+                <span id="alotoc">
           ALOTOC
         </span>
-      </div> <!--Banner-->
-      <div class="menu">
-        <div class="menuBtn hoverable">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+            </div>
+            <!--Banner-->
+            <div class="menu">
+                <div class="menuBtn hoverable">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <table class="menuTable">
+                    <tr>
+                        <td class="hoverable" onclick="goToHome()">Home</td>
+                        <td class="hoverable" onclick="goToGit()">Github</td>
+                        <td class="hoverable" onclick="goToScreenshots()">Screenshots</td>
+                        <td class="hoverable" onclick="goToDocu()">Code Documentation</td>
+                    </tr>
+                </table>
+            </div>
+            <!--Menu-->
+            <div class="menuList">
+                <ul>
+                    <li class="hoverable" onclick="goToHome()">Home</li>
+                    <li class="hoverable" onclick="goToGit()">Github</li>
+                    <li class="hoverable" onclick="goToScreenshots()">Screenshots</li>
+                    <li class="hoverable" onclick="goToDocu()">Code Documentation</li>
+                </ul>
+            </div>
+            <!--MenuList-->
+        </header>
+
+        <div class="content">
+            <div class="contentInner"></div>
+            <div class="footer">
+                <div>
+                    Contact me: <a href="mailto:kazeheki@web.de">kazeheki@web.de</a>
+                </div>
+            </div>
+            <!--Footer-->
         </div>
-        <table class="menuTable">
-          <tr>
-            <td class ="hoverable" onclick="goToHome()">Home</td>
-            <td class ="hoverable"  onclick="goToGit()">Github</td>
-            <td class ="hoverable"  onclick="goToScreenshots()">Screenshots</td>
-            <td class ="hoverable"  onclick="goToDocu()">Code Documentation</td>
-          </tr>
-        </table>
-      </div> <!--Menu-->
-      <div class="menuList">
-        <ul>
-          <li class ="hoverable" onclick="goToHome()">Home</li>
-          <li class ="hoverable" onclick="goToGit()">Github</li>
-          <li class ="hoverable" onclick="goToScreenshots()">Screenshots</li>
-          <li class ="hoverable" onclick="goToDocu()">Code Documentation</li>
-        </ul>
-      </div> <!--MenuList-->
-    </header>
+        <!--Content-->
 
-    <div class="content">
-      <div class="contentInner"></div>
-      <div class="footer">
-        <div>
-          Contact me: <a href="mailto:kazeheki@web.de">kazeheki@web.de</a>
-        </div>
-      </div> <!--Footer-->
-    </div> <!--Content-->
+    </div>
+    <!--Wrapper-->
 
-  </div> <!--Wrapper-->
-
-  <!--Btn for going back up-->
-  <div class="toTop" onclick="goToTop()">
-    <svg width="51" height="51">
+    <!--Btn for going back up-->
+    <div class="toTop" onclick="goToTop()">
+        <svg width="51" height="51">
       <circle cx="25" cy="25" r="25"></circle>
       <line x1="17" y1="35" x2="33" y2="35"></line>
       <line x1="25" y1="35" x2="25" y2="15"></line>
       <line x1="25" y1="15" x2="17" y2="20"></line>
       <line x1="25" y1="15" x2="33" y2="20"></line>
     </svg>
-  </div> <!--ToTop-->
+    </div>
+    <!--ToTop-->
 
-  <!-- AngularJs files -->
-  <script src="js/alotoc.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/links.js"></script>
+    <!-- AngularJs files -->
+    <script src="js/alotoc.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/links.js"></script>
 </body>
 
 </html>
