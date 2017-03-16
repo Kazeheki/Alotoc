@@ -1,0 +1,27 @@
+@import "colors";
+@import "functions";
+
+#help{
+  padding: 15px;
+  padding-bottom: 6rem;
+  margin: auto;
+  color: $bodyTxtCol;
+  min-width: 500px;
+  max-width: 1000px;
+  width: 55%;
+
+  li{
+    list-style-type: square;
+  }
+
+  a{
+    color: $linkCol;
+    text-decoration: underline;
+  }
+
+  .helpCard{
+    background-color: $picCardCol;
+    padding: 2px;
+    border: solid $borderCol 1px;
+  }
+}

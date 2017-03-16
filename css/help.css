@@ -1,0 +1,21 @@
+#help {
+  padding: 15px;
+  padding-bottom: 6rem;
+  margin: auto;
+  color: #435058;
+  min-width: 500px;
+  max-width: 1000px;
+  width: 55%;
+}
+#help li {
+  list-style-type: square;
+}
+#help a {
+  color: #848c8e;
+  text-decoration: underline;
+}
+#help .helpCard {
+  background-color: #bfb7b6;
+  padding: 2px;
+  border: solid #435058 1px;
+}
