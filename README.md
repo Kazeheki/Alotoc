@@ -24,6 +24,4 @@ To run it simply execute the Alotoc.jar file.
 
 It should display the time set by the system.
 
-If not or something else is buggy, please contact me: [kazeheki@web.de](mailto:kazeheki@web.de)
-
 You can of course also write to me if you have a suggestion. :wink:
