@@ -10,6 +10,7 @@
                                         Always on top clock
                                         
                                         
+⚠️This project is archived. It will no longer be worked on.
 
 Visit the [website](https://kazeheki.github.io/Alotoc/)
 
