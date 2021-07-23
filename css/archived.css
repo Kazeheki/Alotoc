@@ -1,0 +1,21 @@
+.archived-note {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 30px;
+  max-width: 175px;
+  z-index: 99;
+  padding: 30px 15px 10px 15px;
+  background: #ffd92e repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.1) 0, rgba(255, 0, 0, 0.1) 5px, transparent 5px, transparent 10px);
+}
+.archived-note strong {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.archived-note button {
+  margin-top: 15px;
+}
+
+/*# sourceMappingURL=archived.css.map */

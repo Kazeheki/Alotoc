@@ -1,0 +1,32 @@
+.archived-note {
+  $stripes-color: hsla(0, 100%, 50%, 0.1);
+  $bg-color: hsl(49, 100%, 59%);
+  $background: $bg-color repeating-linear-gradient(
+                  45deg,
+                  $stripes-color 0,
+                  $stripes-color 5px,
+                  transparent 5px,
+                  transparent 10px
+  );
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 30px;
+  max-width: 175px;
+  z-index: 99;
+  padding: 30px 15px 10px 15px;
+
+  background: $background;
+
+  strong {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+}
